@@ -1,0 +1,195 @@
+/*==========================================================================
+Project
+==========================================================================*/
+.project__area {
+    overflow: hidden;
+    background: var(--color-4);
+    &-wrapper {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &-item {
+        position: relative;
+        z-index: 9;
+        min-height: 650px;
+        border-right: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+        box-shadow: var(--box-shadow-1);
+        overflow: hidden;
+        &-content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding: 53px 50px;
+            background: var(--white);
+            opacity: 0;
+            transition: all 0.4s ease-out 0s;
+            z-index: -1;
+            bottom: -30px;
+            border-bottom: 1px solid var(--border-color-3);
+            span {
+                display: inline-block;
+                position: relative;
+                font-weight: 500;
+                color: var(--primary-color);
+                text-transform: uppercase;
+                z-index: 1;
+                margin-bottom: 8px;
+                padding-left: 40px;
+                font-family: var(--heading-font);
+                &::after {
+                    position: absolute;
+                    top: 12px;
+                    content: '';
+                    left: 0;
+                    width: 30px;
+                    height: 2px;
+                    background: var(--primary-color);
+                }                
+            }
+            h3 {
+                a {
+                    transition: all 0.4s ease-out 0s;
+                    &:hover {
+                        color: var(--primary-color);
+                    }                    
+                }
+            }
+        }
+        &.project__area-item-hover {
+            .project__area-item-content {
+                opacity: 1;
+                z-index: 3;
+                bottom: 0;
+            }
+        }
+    }
+}
+/*==========================================================================
+Project Two
+==========================================================================*/
+.project__two {
+    background: var(--heading-color);
+    &-title {
+        h2 {
+            color: var(--white);
+        }
+    }
+    &-item {
+        &-image {
+            position: relative;
+            overflow: hidden;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                left: 0;
+                bottom: 0;
+                z-index: 0;
+                transition: all 0.4s ease-out 0s;
+                opacity: 0;
+                background: var(--heading-color);                
+            }
+            img {
+                height: 360px;
+                width: 100%;
+                object-fit: cover;
+            }
+            &-content {
+                padding: 30px 40px;
+                background: var(--heading-color);
+                position: absolute;
+                left: 40px;
+                display: inline-table;
+                right: 40px;
+                bottom: 50px;
+                transition: all 0.4s ease-out 0s;
+                opacity: 0;  
+                z-index: 1;              
+                span {
+                    display: inline-block;
+                    position: relative;
+                    font-weight: 500;
+                    color: var(--primary-color);
+                    text-transform: uppercase;
+                    margin-bottom: 8px;
+                    font-family: var(--heading-font);              
+                }
+                h4 {
+                    color: var(--white);
+                    max-width: 260px;
+                    a {
+                        transition: all 0.4s ease-out 0s;
+                        &:hover {
+                            color: var(--primary-color);
+                        }                    
+                    }
+                }
+            }
+        }
+        &-hover {
+            .project__two-item-image {
+                &::after {
+                    opacity: 0.4;
+                    height: 100%;
+                }
+                &-content {
+                    bottom: 30px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1399px) {
+    .project__two {
+        &-item {
+            &-image {
+                &-content {
+                    left: 30px;
+                    right: 30px;
+                }
+            }
+            &-hover {
+                .project__two-item-image {
+                    &-content {
+                        bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .project__area {
+        &-item {
+            min-height: 500px;
+        }
+    }
+    .project__two {
+        &-item {
+            &-image {
+                &-content {
+                    left: 25px;
+                    right: 25px;
+                }
+            }
+            &-hover {
+                .project__two-item-image {
+                    &-content {
+                        bottom: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .project__area {
+        &-item-content {
+            padding: 45px 30px;
+        }
+    }
+}

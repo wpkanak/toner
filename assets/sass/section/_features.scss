@@ -1,0 +1,55 @@
+/*==========================================================================
+Approach
+==========================================================================*/
+.approach__area {
+    &-image {
+        margin-right: 100px;
+    }
+    &-title {
+        h2 {
+            margin-bottom: 40px;
+            max-width: 515px;
+        }
+    }
+    &-list {
+        &-item {
+            padding: 40px;
+            border: 1px solid var(--border-color-2);
+            &-icon {
+                position: relative;
+                margin-bottom: 30px;
+                img {
+                    max-width: 60px;
+                }            
+            }
+            &-content {
+                h4 {
+                    margin-bottom: 14px;
+                    max-width: 210px;
+                }
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }        
+    }
+}
+@media (max-width: 1399px) {
+    .approach__area {
+        &-image {
+            margin-right: 30px;
+        }
+        &-list {
+            &-item {
+                padding: 40px 30px;
+            }        
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .approach__area {
+        &-image {
+            margin-right: 0;
+        }
+    }
+}

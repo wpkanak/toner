@@ -1,0 +1,95 @@
+/*==========================================================================
+Gallery
+==========================================================================*/
+.gallery__area {
+    &-item {
+        &-image {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 40%;
+                left: 0;
+                top: 0;
+                z-index: 0;
+                transition: all 0.4s ease-out 0s;
+                opacity: 0;
+                background: var(--heading-color);                
+            }
+            &-icon {
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                transition: all 0.4s ease-out 0s;
+                opacity: 0;
+                i {
+                    font-size: 30px;
+                    color: var(--white);
+                }
+            }
+            &.masonry {
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    height: 357px;
+                }
+            }
+        }
+        &-hover {
+            .gallery__area-item-image {
+                &::after {
+                    opacity: 0.8;
+                    height: 100%;
+                }
+                &-icon {
+                    top: 50%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1399px) {
+    .gallery__area {
+        &-item {
+            &-image {
+                &.masonry {
+                    img {
+                        height: 302px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .gallery__area {
+        &-item {
+            &-image {
+                &.masonry-big {
+                    img {
+                        height: 635px;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .gallery__area {
+        &-item {
+            &-image {
+                &.masonry-big {
+                    img {
+                        height: 500px;
+                    }
+                }
+            }
+        }
+    }
+}

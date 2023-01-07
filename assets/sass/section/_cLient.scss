@@ -1,0 +1,36 @@
+/*==========================================================================
+Client
+==========================================================================*/
+.cLient__area {
+    &-brand {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 55px;
+        column-gap: 146px;
+    }
+}
+@media (max-width: 991px) {
+    .cLient__area {
+        &-brand {
+            grid-template-columns: repeat(4, 1fr);
+            row-gap: 40px;
+            column-gap: 120px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .cLient__area {
+        &-brand {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+@media (max-width: 465px) {
+    .cLient__area {
+        &-brand {
+            row-gap: 35px;
+            column-gap: 50px;
+        }
+    }
+}

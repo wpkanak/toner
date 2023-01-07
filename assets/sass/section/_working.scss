@@ -1,0 +1,47 @@
+/*==========================================================================
+Working
+==========================================================================*/
+.working__process {
+    &-item {
+        position: relative;
+        border: 1px solid var(--border-color-2);
+        padding: 40px 30px;
+        display: flex;
+        gap: 25px;
+        > span {
+            position: absolute;
+            top: 50%;
+            font-size: 90px;   
+            line-height: 100px;
+            left: 15px;
+            transform: translateY(-50%);
+            color: var(--heading-color);
+            opacity: 0.04;
+            font-weight: 500;
+            font-family: var(--heading-font);
+        }
+        &-number {
+            span {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                display: inline-block;
+                text-align: center;
+                border: 1px solid var(--primary-color);
+                border-radius: 50%;
+                color: var(--primary-color);
+                font-family: var(--heading-font);
+                font-weight: 600;
+                font-size: 20px;                
+            }            
+        }
+        &-content {
+            h5 {
+                margin-bottom: 8px;
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

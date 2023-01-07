@@ -1,0 +1,63 @@
+/*==========================================================================
+Error
+==========================================================================*/
+.error__page {
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    &-area {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        &-image {
+            margin-bottom: 60px;
+        }
+        &-title {
+            h2 {
+                margin-bottom: 20px;
+            }
+            p {
+                text-transform: uppercase;
+                font-family: var(--heading-font);
+                font-weight: 500;
+                color: var(--heading-color);     
+                max-width: 620px;   
+                margin: 0 auto;
+                margin-bottom: 50px;    
+            }
+        }
+    }
+}
+@media (max-width: 1399px) {
+    .error__page {
+        &-area {
+            &-image {
+                margin-bottom: 40px;
+                padding: 0 200px;
+            }
+            &-title {
+                p {
+                    margin-bottom: 30px;    
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1399px) {
+    .error__page {
+        &-area {
+            &-image {
+                padding: 0 20px;
+            }
+            &-title {
+                padding: 0 15px;
+                p {
+                    font-size: 14px; 
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

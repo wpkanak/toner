@@ -1,0 +1,182 @@
+/*==========================================================================
+Services
+==========================================================================*/
+.services__area {
+    overflow: hidden;
+    margin-top: -200px;
+    background: var(--color-4);
+    &-bg {
+        padding: 100px 0;
+        position: relative;
+        z-index: 1;    
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -130px;
+            width: 300%;
+            bottom: 0;
+            z-index: -1;
+            background: var(--white);
+        } 
+
+    }
+    &-item {
+        background: var(--color-4);
+        padding: 50px 28px;
+        text-align: center;
+        &-icon {
+            position: relative;
+            margin-bottom: 30px;
+            img {
+                transition: all 0.4s ease-out 0s;                
+            }
+            &-one {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: all 0.4s ease-out 0s;
+                z-index: 1;                
+            }            
+        }
+        &-content {
+            h4 {
+                margin-bottom: 14px;
+                a {
+                    transition: all 0.4s ease-out 0s;
+                    &:hover {
+                        color: var(--primary-color);
+                    }                    
+                }
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+        &:hover .services__area-item-icon {
+            > img {
+                opacity: 0;
+            }
+            &-one {
+                opacity: 1;
+            }
+        }
+    }
+}
+/*==========================================================================
+Services Two
+==========================================================================*/
+.services__two {
+    background: var(--heading-color);
+    &-title {
+        text-align: center;
+        max-width: 435px;
+        margin: 0 auto;
+        h2 {
+            color: var(--white);
+        }
+    }
+    &-item {
+        background: var(--color-7);
+        padding: 50px 28px;
+        text-align: center;
+        &-icon {
+            position: relative;
+            margin-bottom: 30px;
+            img {
+                max-width: 60px;
+            }          
+        }
+        &-content {
+            h4 {
+                margin-bottom: 14px;
+                color: var(--white);
+                a {
+                    transition: all 0.4s ease-out 0s;
+                    &:hover {
+                        color: var(--primary-color);
+                    }                    
+                }
+            }
+            p {
+                margin-bottom: 0;
+                color: var(--color-2);
+            }
+        }
+    }
+}
+/*==========================================================================
+Services Page
+==========================================================================*/
+.services__page {
+    &-item {
+        padding: 50px 28px;
+        text-align: center;
+        border: 1px solid var(--border-color-2);
+        &-icon {
+            position: relative;
+            margin-bottom: 30px;
+            img {
+                max-width: 60px;
+            }            
+        }
+        &-content {
+            h4 {
+                margin-bottom: 14px;
+                a {
+                    transition: all 0.4s ease-out 0s;
+                    &:hover {
+                        color: var(--primary-color);
+                    }                    
+                }
+            }
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+/*==========================================================================
+Services Details
+==========================================================================*/
+.services__details {
+    &-content {
+        h2 {
+            margin-bottom: 30px;
+            max-width: 560px;
+        }
+        p {
+            margin: 0;
+        }
+        &-list-item h4 {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media (max-width: 1399px) {
+    .services__page {
+        &-item {
+            &-content {
+                h4 {
+                    font-size: 18px;
+                    line-height: 28px;                    
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .services__page {
+        &-item {
+            &-content {
+                h4 {
+                    font-size: 20px;
+                    line-height: 30px;                    
+                }
+            }
+        }
+    }
+}

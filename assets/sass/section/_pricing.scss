@@ -1,0 +1,298 @@
+/*==========================================================================
+Pricing One
+==========================================================================*/
+.pricing__one {
+    &-item {
+        background: var(--color-4);
+        padding: 40px;
+        &-price {
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color-6);
+            > span {
+                font-weight: 500;
+                font-size: 14px;   
+                line-height: 24px;
+                font-family: var(--heading-font);             
+                text-transform: uppercase;
+                color: var(--heading-color);
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+            h2 {
+                span {
+                    font-weight: 500;
+                    font-size: 14px;   
+                    line-height: 24px; 
+                    margin-left: 10px;
+                    display: inline-block;                    
+                }
+            }
+        }
+        &-list {
+            ul {
+                padding: 0;
+                margin: 0;
+                li {
+                    list-style: none;
+                    color: var(--heading-color);
+                    margin-bottom: 20px;
+                    i {
+                        color: var(--primary-color);
+                        font-size: 20px;
+                        margin-right: 10px;
+                    }
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        &-btn {
+            margin-top: 30px;
+            .theme-border-btn {
+                padding: 11px 40px;
+                border-color: var(--border-color-6);
+                color: var(--heading-color);
+                &:hover {
+                    color: var(--white);
+                    border-color: var(--primary-color);
+                }
+            }
+        }
+    }
+}
+/*==========================================================================
+Pricing Two
+==========================================================================*/
+.pricing__two {
+    background: var(--color-4);
+    &-title {
+        h2 {
+            margin-bottom: 30px;
+        }
+        p {
+            margin-bottom: 30px;
+            max-width: 280px;
+        }
+    }
+    &-right {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        &-item {
+            background: var(--white);
+            padding: 40px;
+            &.center {
+                background: var(--heading-color);
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    top: -30px;
+                    width: 100%;
+                    height: 30px;
+                    background: var(--heading-color);
+                }               
+                &::after {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    bottom: -30px;
+                    width: 100%;
+                    height: 30px;
+                    background: var(--heading-color);
+                }               
+                .pricing__two-right-item {
+                    &-price {
+                        border-color: var(--body-color);
+                        > span {
+                            color: var(--white);
+                        }
+                        h2 {
+                            color: var(--white);
+                        }
+                    }
+                    &-list ul li {
+                        color: var(--color-3);
+                    }
+                    &-btn {
+                        .theme-btn {
+                            padding: 12px 40px;
+                            &::before {
+                                background: var(--white);
+                            }
+                            &::after {
+                                background: var(--white);
+                            }
+                            &:hover {
+                                color: var(--heading-color);
+                            }
+                        }
+                    }
+                }
+            }
+            &-price {
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+                border-bottom: 1px solid var(--border-color-6);
+                > span {
+                    font-weight: 500;
+                    font-size: 14px;   
+                    line-height: 24px;
+                    font-family: var(--heading-font);             
+                    text-transform: uppercase;
+                    color: var(--heading-color);
+                    margin-bottom: 5px;
+                    display: inline-block;
+                }
+                h2 {
+                    span {
+                        font-weight: 500;
+                        font-size: 14px;   
+                        line-height: 24px; 
+                        margin-left: 10px;
+                        display: inline-block;                    
+                    }
+                }
+            }
+            &-list {
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        list-style: none;
+                        color: var(--heading-color);
+                        margin-bottom: 20px;
+                        i {
+                            color: var(--primary-color);
+                            font-size: 20px;
+                            margin-right: 10px;
+                        }
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            &-btn {
+                margin-top: 30px;
+                .theme-border-btn {
+                    padding: 11px 40px;
+                    border-color: var(--border-color-6);
+                    color: var(--heading-color);
+                    &:hover {
+                        color: var(--white);
+                        border-color: var(--primary-color);
+                    }
+                }
+            }
+        }        
+    }
+    &-button {
+        & .nav-item {
+            button {
+                background: transparent;
+                border: 1px solid var(--border-color-2);
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 50px;
+                text-transform: uppercase;
+                font-family: var(--heading-font);
+                padding: 0 30px;
+                color: var(--heading-color);
+            }
+            & .active {
+                background: var(--primary-color);
+                border-color: var(--primary-color);
+                color: var(--white);
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1399px) {
+    .pricing__one {
+        &-item {
+            padding: 40px 30px;
+            &-list {
+                ul {
+                    li {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            &-btn {
+                .theme-border-btn {
+                    padding: 11px 30px;
+                }
+            }
+        }
+    }
+    .pricing__two {
+        &-right {
+            &-item {
+                padding: 30px 25px;
+                &.center {              
+                    .pricing__two-right-item {
+                        &-btn {
+                            .theme-btn {
+                                padding: 12px 34px;
+                            }
+                        }
+                    }
+                }
+                &-btn {
+                    .theme-border-btn {
+                        padding: 11px 34px;
+                    }
+                }
+            }        
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .pricing__two {
+        &-title {
+            text-align: center;
+            p {
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+        }
+        &-button {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .pricing__two {
+        &-right {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            &-item {
+                &.center {
+                    &::before {
+                        display: none;
+                    }               
+                    &::after {
+                        display: none;
+                    }
+                }
+            }  
+        }
+        &-button {
+            margin-bottom: 0;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .pricing__two {
+        &-right {
+            grid-template-columns: repeat(1, 1fr); 
+        }
+    }
+}

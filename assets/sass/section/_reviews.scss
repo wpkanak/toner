@@ -1,0 +1,96 @@
+/*==========================================================================
+Reviews
+==========================================================================*/
+.reviews__area {
+    &-item {
+        position: relative;
+        display: flex;
+        gap: 30px;
+        border: 1px solid var(--border-color-2);
+        padding: 50px;
+        &-icon {
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+        }
+        &-avatar {
+            img {
+                max-width: 100px;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+        }
+        &-content {
+            p {
+                margin-bottom: 25px;
+            }
+            span {
+                text-transform: uppercase;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 22px;  
+                color: var(--heading-color);         
+                font-family: var(--heading-font);     
+            }
+        }
+    }
+    &-pagination {
+        text-align: right;
+        & .reviews-pagination {
+            span {
+                background-color: var(--primary-color);
+                opacity: 1;
+                box-shadow: 0 0 0 0px var(--primary-color);
+                border: 6px solid var(--white);
+                width: 20px;
+                height: 20px;                
+                &.swiper-pagination-bullet-active {
+                    box-shadow: 0 0 0 1px var(--primary-color);
+                }       
+            }     
+        }
+    }
+}
+@media (max-width: 1399px) {
+    .reviews__area {
+        &-item {
+            padding: 45px 35px;
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .reviews__area {
+        &-item {
+            display: block;
+            &-content {
+                margin-top: 25px;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .reviews__area {
+        &-item {
+            padding: 40px 30px;
+            &-content {
+                p {
+                    font-size: 15px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .reviews__area {
+        &-title {
+            text-align: center;
+        }
+        &-pagination {
+            text-align: center;
+            margin-top: 30px;
+        }
+    }
+}

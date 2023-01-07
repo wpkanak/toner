@@ -1,0 +1,110 @@
+/*==========================================================================
+FAQ
+==========================================================================*/
+.faq__area {
+    position: relative;
+    overflow: hidden;
+    &-left {
+        margin-right: 70px;
+        &-title {
+            h2 {
+                max-width: 340px;
+            }
+        }
+        &-faq {
+            &-item {
+                border-bottom: 1px solid var(--border-color-2);
+                &-card {
+                    &-header {  
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border: none;
+                        cursor: pointer;
+                        padding-top: 30px;
+                        padding-bottom: 10px;
+                        i {
+                            color: var(--primary-color);
+                            padding: 0 14px;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            border-radius: 50%;
+                            border: 1px solid var(--primary-color);
+                        }
+                        &-content {
+                            padding: 0px 0 20px 0;
+                            p {
+                                margin: 0;
+                                max-width: 440px;
+                            }
+                        }          
+                    }
+                }
+            }            
+        }
+    }
+    &-right {
+        &-image {
+            width: 250%;
+            img {
+                min-height: 640px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {
+    .faq__area {
+        &-left {
+            margin: 0;
+            &-faq {
+                &-item {
+                    &-card {
+                        &-header { 
+                            h5 {
+                                font-size: 15px;
+                                line-height: 25px;
+                            }         
+                        }
+                    }
+                }            
+            }
+        }
+        &-right {
+            &-image {
+                width: 110%;
+                img {
+                    min-height: 580px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .faq__area {
+        &-left {
+            margin: 0;
+            &-faq {
+                &-item {
+                    &-card {
+                        &-header { 
+                            h5 {
+                                font-size: 15px;
+                                line-height: 25px;
+                            }         
+                        }
+                    }
+                }            
+            }
+        }
+        &-right {
+            &-image {
+                width: 100%;
+                img {
+                    min-height: 500px;
+                }
+            }
+        }
+    }
+}
